@@ -23,6 +23,14 @@ class FeedItemListViewController: UIViewController {
         return view
     }()
 
+    /// RefreshControl init
+    private let refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.attributedTitle = NSAttributedString(string: "Refreshing feed...")
+        view.addTarget(self, action: #selector(refreshFeedItemList), for: .valueChanged)
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +43,8 @@ class FeedItemListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        /// Sets refresh control to tableView
+        tableView.refreshControl = refreshControl
         /// Registers the tableView cell
         tableView.register(FeedItemTableViewCell.self, forCellReuseIdentifier: cellId)
 
@@ -56,6 +66,16 @@ class FeedItemListViewController: UIViewController {
         feedItemListViewModel.updateNavigationTitle = { title in
             self.title = title
         }
+
+        /// Hides refresh control once pull to refresh call is done
+        feedItemListViewModel.hideRefreshControl = {
+            self.refreshControl.endRefreshing()
+        }
+    }
+
+    /// Refresh control value change function call
+    @objc func refreshFeedItemList(sender: UIRefreshControl) {
+        feedItemListViewModel.loadFeedItems()
     }
 }
 

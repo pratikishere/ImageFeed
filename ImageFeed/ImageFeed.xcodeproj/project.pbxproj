@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E2F9BB124A721A900472B3D /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2F9BB124A721A900472B3D /* Image Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2F9BB424A721A900472B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E2F9BBB24A721AA00472B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2F9BBE24A721AA00472B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		9E2F9BB224A721A900472B3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E2F9BB124A721A900472B3D /* ImageFeed.app */,
+				9E2F9BB124A721A900472B3D /* Image Feed.app */,
 				9E2F9BC524A721AA00472B3D /* ImageFeedTests.xctest */,
 				9E2F9BD024A721AA00472B3D /* ImageFeedUITests.xctest */,
 			);
@@ -201,7 +201,7 @@
 			);
 			name = ImageFeed;
 			productName = ImageFeed;
-			productReference = 9E2F9BB124A721A900472B3D /* ImageFeed.app */;
+			productReference = 9E2F9BB124A721A900472B3D /* Image Feed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9E2F9BC424A721AA00472B3D /* ImageFeedTests */ = {
@@ -515,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognizant.ImageFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Feed";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -532,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognizant.ImageFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Feed";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

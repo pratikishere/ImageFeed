@@ -15,6 +15,8 @@ class FeedItemListViewModel {
     var onFeedItemLoaded: (() -> ()) = {}
     /// Closure which is called after API completion to update navigation title
     var updateNavigationTitle: ((String) -> ())?
+    /// Closure which is called after API is called to hide refresh control
+    var hideRefreshControl: (() -> ()) = {}
 
     private var apiService: ApiService
 
@@ -34,6 +36,9 @@ class FeedItemListViewModel {
 
                 self.onFeedItemLoaded()
                 self.updateNavigationTitle?(title ?? "")
-            }, failure: {})
+                self.hideRefreshControl()
+            }, failure: {
+                self.hideRefreshControl()
+        })
     }
 }
