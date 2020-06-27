@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: Any]
-
 class ApiService {
     private let sourceURL = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")!
 
