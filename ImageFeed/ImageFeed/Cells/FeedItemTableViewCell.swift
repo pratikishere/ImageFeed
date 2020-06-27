@@ -45,6 +45,7 @@ class FeedItemTableViewCell: UITableViewCell {
         textView.font = UIFont.systemFont(ofSize: 16)
         textView.textAlignment = .left
         textView.isScrollEnabled = false
+        textView.isEditable = false
         return textView
     }()
 
@@ -60,6 +61,8 @@ class FeedItemTableViewCell: UITableViewCell {
     /// Sets up cell UI
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
+
         addSubview(feedItemTitleLabel)
         addSubview(feedItemDescriptionTextView)
         addSubview(feedItemImage)
