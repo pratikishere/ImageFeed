@@ -9,6 +9,15 @@ import UIKit
 
 class FeedItemListViewController: UIViewController {
 
+    /// TableView init
+    private let tableView: UITableView = {
+        let view = UITableView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.separatorStyle = .none
+        view.estimatedRowHeight = 100
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,5 +25,14 @@ class FeedItemListViewController: UIViewController {
         self.view.backgroundColor = .white
         /// Sets title in navigation bar
         self.title = "Feed item list demo"
+
+        /// Adds tableView as subview and sets constraint
+        self.view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
 }
