@@ -51,6 +51,11 @@ class FeedItemListViewController: UIViewController {
         feedItemListViewModel.onFeedItemLoaded = {
             self.tableView.reloadData()
         }
+
+        /// Update title in navigation bar from api response
+        feedItemListViewModel.updateNavigationTitle = { title in
+            self.title = title
+        }
     }
 }
 

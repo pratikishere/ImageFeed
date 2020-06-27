@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// Sets FeedItemListViewController as rootViewController
         if let keyWindow = window {
             let feedItemListVC = FeedItemListViewController()
-            feedItemListVC.feedItemListViewModel = FeedItemListViewModel()
+            feedItemListVC.feedItemListViewModel = FeedItemListViewModel(apiService: ApiService())
             let rootViewController = UINavigationController(rootViewController: feedItemListVC)
             keyWindow.rootViewController = rootViewController
             keyWindow.makeKeyAndVisible()
