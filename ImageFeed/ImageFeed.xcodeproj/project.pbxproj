@@ -19,6 +19,7 @@
 		9E8700CC24A72F9B00172776 /* FeedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8700CB24A72F9B00172776 /* FeedItemViewModel.swift */; };
 		9E8700CF24A731EC00172776 /* FeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8700CE24A731EC00172776 /* FeedItemTableViewCell.swift */; };
 		9E8700D224A7393200172776 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8700D124A7393200172776 /* ApiService.swift */; };
+		9E8700D524A73BEC00172776 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8700D424A73BEC00172776 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9E8700CB24A72F9B00172776 /* FeedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewModel.swift; sourceTree = "<group>"; };
 		9E8700CE24A731EC00172776 /* FeedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemTableViewCell.swift; sourceTree = "<group>"; };
 		9E8700D124A7393200172776 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9E8700D424A73BEC00172776 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +109,11 @@
 		9E2F9BB324A721A900472B3D /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9E8700D324A73BCF00172776 /* UI */,
 				9E8700D024A7392000172776 /* Services */,
 				9E8700CD24A731CF00172776 /* Cells */,
 				9E8700C824A72F7000172776 /* ViewModels */,
 				9E8700C324A7270100172776 /* Models */,
-				9E2F9BE224A7221700472B3D /* FeedItemListViewController.swift */,
 				9E2F9BB424A721A900472B3D /* AppDelegate.swift */,
 				9E2F9BBB24A721AA00472B3D /* Assets.xcassets */,
 				9E2F9BBD24A721AA00472B3D /* LaunchScreen.storyboard */,
@@ -170,6 +172,15 @@
 				9E8700D124A7393200172776 /* ApiService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9E8700D324A73BCF00172776 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9E2F9BE224A7221700472B3D /* FeedItemListViewController.swift */,
+				9E8700D424A73BEC00172776 /* ImageLoader.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +338,7 @@
 				9E2F9BB524A721A900472B3D /* AppDelegate.swift in Sources */,
 				9E8700CC24A72F9B00172776 /* FeedItemViewModel.swift in Sources */,
 				9E8700C524A7271F00172776 /* FeedItem.swift in Sources */,
+				9E8700D524A73BEC00172776 /* ImageLoader.swift in Sources */,
 				9E8700CF24A731EC00172776 /* FeedItemTableViewCell.swift in Sources */,
 				9E8700D224A7393200172776 /* ApiService.swift in Sources */,
 				9E8700C724A7273D00172776 /* ResponseFeedItem.swift in Sources */,

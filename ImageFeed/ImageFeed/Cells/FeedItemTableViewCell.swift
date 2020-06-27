@@ -14,6 +14,16 @@ class FeedItemTableViewCell: UITableViewCell {
         didSet {
             feedItemTitleLabel.text = feedItemViewModel?.title
             feedItemDescriptionTextView.text = feedItemViewModel?.description
+
+            if let feedItemViewModel = feedItemViewModel,
+                let image = feedItemViewModel.image,
+                let imgUrl = URL(string: image) {
+                feedItemImage.loadImageWithUrl(imgUrl, failure: {
+                    self.feedItemImage.image = UIImage.init(named: "placeholder")
+                })
+            } else {
+                feedItemImage.image = UIImage.init(named: "placeholder")
+            }
         }
     }
 
@@ -39,8 +49,8 @@ class FeedItemTableViewCell: UITableViewCell {
     }()
 
     /// Feed item image init
-    private let feedItemImage: UIImageView = {
-        let imgView = UIImageView()
+    private let feedItemImage: ImageLoader = {
+        let imgView = ImageLoader()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
