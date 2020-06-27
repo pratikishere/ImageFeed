@@ -9,6 +9,9 @@ import UIKit
 
 class FeedItemListViewController: UIViewController {
 
+    /// View model for feed item list
+    var feedItemListViewModel: FeedItemListViewModel!
+
     /// TableView init
     private let tableView: UITableView = {
         let view = UITableView()
@@ -34,5 +37,10 @@ class FeedItemListViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
         ])
+
+        /// Updates tableview when api response is successful
+        feedItemListViewModel.onFeedItemLoaded = {
+            self.tableView.reloadData()
+        }
     }
 }
